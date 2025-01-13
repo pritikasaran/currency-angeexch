@@ -2,6 +2,8 @@ package javatpoint.microservice.demo;
 import java.math.BigDecimal;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
@@ -30,6 +32,14 @@ public ExchangeValue(Long id, String from, String to, BigDecimal conversionMulti
 {
 super();
 this.id = id;
+this.from = from;
+this.to = to;
+this.conversionMultiple = conversionMultiple;
+}
+
+public ExchangeValue( String from, String to, BigDecimal conversionMultiple) 
+{
+super();
 this.from = from;
 this.to = to;
 this.conversionMultiple = conversionMultiple;
